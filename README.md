@@ -1,4 +1,5 @@
 Un juego simple de correr y esquivar obstáculos inspirado en el famoso juego del dinosaurio de Google Chrome. ¡Salta, corre y evita los cactus para conseguir la mejor puntuación!
+
 ✨ Características
 🏃‍♂️ Animación del dinosaurio corriendo.
 🌵 Generación aleatoria de obstáculos (cactus).
