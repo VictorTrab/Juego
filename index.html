@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaurio Chrome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="background-music" src="music.mp3" loop></audio>
+    
+    <div class="contenedor">
+        <div class="suelo"></div>
+        <div class="dino dino-corriendo"></div>
+        <div class="score">0</div>
+    </div>
+    <div class="game-over">GAME OVER</div>
+    <div class="start-screen">
+    <img src="reiniciar.png" alt="Reiniciar" class="reiniciar-img" style="display: none;">
+    <span class="reiniciar-text">Presiona Enter para iniciar</span>
+    </div> 
+    <div class="offline-message">
+        <h1>Sin conexión a Internet</h1>
+        <p><strong>Prueba a:</strong></p>
+        <ul>
+            <li>Comprobar los cables de red, el módem y el router</li>
+            <li>Volver a conectarte a una red Wi-Fi</li>
+            <li><a href="#">Ejecutar Diagnósticos de red de Windows</a></li>
+        </ul>
+        <p>ERR_INTERNET_DISCONNECTED</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

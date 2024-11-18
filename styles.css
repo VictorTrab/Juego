@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+  color: #7e928b;
+  font-family: Arial, sans-serif;
+}
+
+.contenedor {
+  width: 920px;
+  height: 280px;
+  position: absolute; /* Cambiamos a absolute */
+  top: 10px; /* Posicionamos en la parte superior */
+  left: 50%; /* Centramos horizontalmente */
+  transform: translateX(-50%);
+  background: linear-gradient(#b7d6c7, transparent) #90ebff;
+  transition: background-color 1s linear;
+  overflow: hidden;
+  border: 3px solid #00b3ff; /* Borde azul */
+  border-radius: 10px;
+}
+
+.mediodia {
+  background-color: #ffdcf3;
+}
+
+.tarde {
+  background-color: #ffadad;
+}
+
+.noche {
+  background-color: #0b0b3b;
+  filter: brightness(0.4);
+}
+
+.dino {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  bottom: 22px;
+  left: 42px;
+  z-index: 2;
+  background: url(dino.png) repeat-x 0px 0px;
+  background-size: 336px 84px;
+  background-position-x: 0px;
+}
+
+.dino-corriendo {
+  animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado {
+  background-position-x: -252px;
+}
+
+.suelo {
+  width: 200%;
+  height: 42px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(suelo.png) repeat-x 0px 0px;
+  background-size: 50% 42px;
+}
+
+.cactus {
+  width: 46px;
+  height: 96px;
+  position: absolute;
+  bottom: 16px;
+  left: 600px;
+  z-index: 1;
+  background: url(cactus1.png) no-repeat;
+}
+
+.cactus2 {
+  width: 98px;
+  height: 66px;
+  background: url(cactus2.png) no-repeat;
+}
+
+.nube {
+  width: 92px;
+  height: 26px;
+  position: absolute;
+  z-index: 0;
+  background: url(nube.png) no-repeat;
+  background-size: 92px 26px;
+}
+
+.score {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  z-index: 10;
+  color: #d48871;
+  font-family: Verdana;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.game-over {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #7e928b;
+  font-size: 50px;
+  font-family: Verdana;
+  font-weight: 700;
+}
+.reiniciar-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px; /* Ajusta según el tamaño deseado */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave para transformaciones */
+}
+
+.reiniciar-img:hover {
+  transform: scale(1.2) rotate(15deg); /* Aumentar tamaño y rotar */
+  filter: brightness(1.2); /* Opcional: Hacer más brillante */
+}
+
+.start-screen {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family: Verdana;
+  font-weight: 700;
+  color: #7e928b;
+  text-align: center;
+  z-index: 10;
+}
+
+.offline-message {
+    color: #aaa;
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+    padding-right: 530px; 
+}
+
+.offline-message h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.offline-message ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.offline-message ul li {
+    margin-bottom: 10px;
+}
+.offline-message a {
+  color: #40a9ff;
+  text-decoration: none;
+}
+
+.offline-message p {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+@keyframes animarDino {
+  from {
+    background-position-x: -84px;
+  }
+  to {
+    background-position-x: -252px;
+  }
+}
